@@ -138,15 +138,6 @@ function renderTable(scripts) {
   const tableBody = document.getElementById("table-body");
   tableBody.innerHTML = ""; // Очистка таблицы перед рендерингом
 
-  // Если нет результатов, отображаем сообщение
-  if (scripts.length === 0) {
-    const row = document.createElement("tr");
-    row.innerHTML = `<td colspan="3" style="text-align: center;">Ничего не найдено</td>`;
-    tableBody.appendChild(row);
-    return;
-  }
-
-  // Рендерим каждую строку скрипта
       scripts.forEach(script => {
         const row = document.createElement("tr");
         row.innerHTML = `  
