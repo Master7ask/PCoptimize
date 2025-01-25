@@ -124,8 +124,7 @@
     function searchScripts() {
       const input = document.getElementById("search-input").value.toLowerCase();
       const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
-      const allScripts = [...scriptsPage1, ...scriptsPage2];
-      const results = allScripts.filter(script =>
+      const results = scriptsPage2.filter(script =>
         script.name.toLowerCase().includes(input) ||
         script.description.toLowerCase().includes(input)
       );
@@ -134,9 +133,9 @@
     }
 
     // Рендер таблицы
-function renderTable(scripts) {
-  const tableBody = document.getElementById("table-body");
-  tableBody.innerHTML = ""; // Очистка таблицы перед рендерингом
+    function renderTable(scripts) {
+      const tableBody = document.getElementById("table-body");
+      tableBody.innerHTML = ""; // Очистка таблицы
 
       scripts.forEach(script => {
         const row = document.createElement("tr");
