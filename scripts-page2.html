@@ -115,7 +115,8 @@
     function searchScripts() {
       const input = document.getElementById('search-input').value.toLowerCase();
       const rows = document.querySelectorAll('tbody tr');
-
+      
+      // Скрыть все строки по умолчанию
       rows.forEach(row => {
         const cells = row.querySelectorAll('td');
         const text = Array.from(cells).map(cell => cell.innerText.toLowerCase()).join(' ');
@@ -125,6 +126,25 @@
         } else {
           row.style.display = 'none';
         }
+      });
+    }
+
+    // Загрузка всех скриптов с 1 и 2 страницы из localStorage
+    window.onload = function() {
+      // Получаем все скрипты с обеих страниц
+      const scripts = JSON.parse(localStorage.getItem('scripts') || '[]');
+      const scriptsPage2 = scripts.slice(20, 40); // Скрипты с 21 по 40
+      const tableBody = document.querySelector('tbody');
+
+      // Загружаем только скрипты с 21 по 40
+      scriptsPage2.forEach(script => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${script.title}</td>
+          <td>${script.description}</td>
+          <td><a href="${script.url}" class="download-btn" download>Скачать</a></td>
+        `;
+        tableBody.appendChild(row);
       });
     }
   </script>
@@ -154,107 +174,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Скрипты 21–40 -->
-        <tr>
-          <td>Скрипт 21</td>
-          <td>Описание скрипта 21.</td>
-          <td><a href="scripts/script21.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 22</td>
-          <td>Описание скрипта 22.</td>
-          <td><a href="scripts/script22.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 23</td>
-          <td>Описание скрипта 23.</td>
-          <td><a href="scripts/script23.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 24</td>
-          <td>Описание скрипта 24.</td>
-          <td><a href="scripts/script24.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 25</td>
-          <td>Описание скрипта 25.</td>
-          <td><a href="scripts/script25.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 26</td>
-          <td>Описание скрипта 26.</td>
-          <td><a href="scripts/script26.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 27</td>
-          <td>Описание скрипта 27.</td>
-          <td><a href="scripts/script27.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 28</td>
-          <td>Описание скрипта 28.</td>
-          <td><a href="scripts/script28.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 29</td>
-          <td>Описание скрипта 29.</td>
-          <td><a href="scripts/script29.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 30</td>
-          <td>Описание скрипта 30.</td>
-          <td><a href="scripts/script30.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 31</td>
-          <td>Описание скрипта 31.</td>
-          <td><a href="scripts/script31.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 32</td>
-          <td>Описание скрипта 32.</td>
-          <td><a href="scripts/script32.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 33</td>
-          <td>Описание скрипта 33.</td>
-          <td><a href="scripts/script33.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 34</td>
-          <td>Описание скрипта 34.</td>
-          <td><a href="scripts/script34.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 35</td>
-          <td>Описание скрипта 35.</td>
-          <td><a href="scripts/script35.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 36</td>
-          <td>Описание скрипта 36.</td>
-          <td><a href="scripts/script36.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 37</td>
-          <td>Описание скрипта 37.</td>
-          <td><a href="scripts/script37.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 38</td>
-          <td>Описание скрипта 38.</td>
-          <td><a href="scripts/script38.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 39</td>
-          <td>Описание скрипта 39.</td>
-          <td><a href="scripts/script39.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
-        <tr>
-          <td>Скрипт 40</td>
-          <td>Описание скрипта 40.</td>
-          <td><a href="scripts/script40.bat" class="download-btn" download>Скачать</a></td>
-        </tr>
+        <!-- Скрипты с 21 по 40 будут загружаться сюда -->
       </tbody>
     </table>
 
@@ -270,3 +190,4 @@
   </footer>
 </body>
 </html>
+
