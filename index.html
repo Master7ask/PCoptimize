@@ -20,55 +20,37 @@
       overflow: hidden;
     }
 
-    .section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Три кнопки в ряд */
+      grid-template-rows: 50vh 50vh; /* Два ряда, каждая по 50% высоты экрана */
       height: 100vh;
-      text-align: center;
-      scroll-snap-align: start;
-    }
-
-    .section:nth-child(1) {
-      background: linear-gradient(120deg, #3a6186, #89253e);
-    }
-
-    .section:nth-child(2) {
-      background: linear-gradient(120deg, #89253e, #1e3c72);
-    }
-
-    .section:nth-child(3) {
-      background: linear-gradient(120deg, #1e3c72, #2a5298);
-    }
-
-    .content {
-      padding: 20px;
-      max-width: 800px;
     }
 
     .button {
-      display: inline-block;
-      padding: 20px 40px;
-      margin-top: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
       text-decoration: none;
+      color: white;
       font-size: 1.5rem;
       font-weight: bold;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 1px solid #444;
       transition: background 0.3s ease, transform 0.2s ease;
+      text-align: center;
     }
 
     .button:hover {
       background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-5px);
+      transform: scale(1.05);
     }
 
-    .description {
+    .button span {
       margin-top: 10px;
-      font-size: 1.2rem;
-      color: #e0e0e0;
+      font-size: 1rem;
+      color: #ddd;
     }
 
     footer {
@@ -93,40 +75,41 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    /* Для прокрутки по секциям */
-    html {
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-    }
   </style>
 </head>
 <body>
-  <!-- Раздел Скрипты -->
-  <div class="section">
-    <div class="content">
-      <h1>Скрипты</h1>
-      <p class="description">Скрипты для автоматизации задач и оптимизации работы ПК.</p>
-      <a href="scripts.html" class="button">Перейти к скриптам</a>
-    </div>
-  </div>
-
-  <!-- Раздел Программы -->
-  <div class="section">
-    <div class="content">
-      <h1>Программы</h1>
-      <p class="description">Популярные программы для диагностики и повышения производительности.</p>
-      <a href="programs.html" class="button">Перейти к программам</a>
-    </div>
-  </div>
-
-  <!-- Раздел Другое -->
-  <div class="section">
-    <div class="content">
-      <h1>Другое</h1>
-      <p class="description">Дополнительные инструменты и ресурсы для работы с компьютером.</p>
-      <a href="other.html" class="button">Перейти к разделу</a>
-    </div>
+  <!-- Контейнер с кнопками -->
+  <div class="container">
+    <!-- Скрипты -->
+    <a href="scripts.html" class="button">
+      Скрипты
+      <span>Скрипты для автоматизации задач и оптимизации работы ПК.</span>
+    </a>
+    <!-- Программы -->
+    <a href="programs.html" class="button">
+      Программы
+      <span>Популярные программы для диагностики и повышения производительности.</span>
+    </a>
+    <!-- Другое -->
+    <a href="other.html" class="button">
+      Другое
+      <span>Дополнительные инструменты и ресурсы для работы с компьютером.</span>
+    </a>
+    <!-- Пустая кнопка для заполнения -->
+    <a href="#" class="button">
+      Пусто
+      <span>Будет добавлено в будущем.</span>
+    </a>
+    <!-- Пустая кнопка для заполнения -->
+    <a href="#" class="button">
+      Пусто
+      <span>Будет добавлено в будущем.</span>
+    </a>
+    <!-- Пустая кнопка для заполнения -->
+    <a href="#" class="button">
+      Пусто
+      <span>Будет добавлено в будущем.</span>
+    </a>
   </div>
 
   <!-- Footer -->
