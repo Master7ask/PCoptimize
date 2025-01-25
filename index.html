@@ -27,7 +27,7 @@
       text-align: center;
       padding: 20px 0;
       background: #282c34;
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #61dafb;
       border-bottom: 2px solid #444;
@@ -35,16 +35,19 @@
 
     /* Контейнер с кнопками */
     .buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Три кнопки в строку */
+      grid-auto-rows: 1fr; /* Высота каждой строки */
+      gap: 20px; /* Промежуток между кнопками */
       flex-grow: 1;
+      padding: 20px;
+      align-items: center;
+      justify-items: center;
     }
 
     .button {
-      width: 200px;
-      height: 150px;
-      margin: 0 20px;
+      width: 100%; /* Кнопка растягивается на всю ширину колонки */
+      height: 200px; /* Фиксированная высота кнопки */
       display: flex;
       flex-direction: column;
       justify-content: center;
