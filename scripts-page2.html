@@ -95,26 +95,6 @@
     // Проверка и сохранение данных в локальном хранилище только если данных нет
     if (!localStorage.getItem("scriptsPage2")) {
       const scriptsPage2 = [
-        { name: "Скрипт 1", description: "Описание скрипта 1", file: "scripts/script1.js" },
-        { name: "Скрипт 2", description: "Описание скрипта 2", file: "scripts/script2.js" },
-        { name: "Скрипт 3", description: "Описание скрипта 3", file: "scripts/script3.js" },
-        { name: "Скрипт 4", description: "Описание скрипта 4", file: "scripts/script4.js" },
-        { name: "Скрипт 5", description: "Описание скрипта 5", file: "scripts/script5.js" },
-        { name: "Скрипт 6", description: "Описание скрипта 6", file: "scripts/script6.js" },
-        { name: "Скрипт 7", description: "Описание скрипта 7", file: "scripts/script7.js" },
-        { name: "Скрипт 8", description: "Описание скрипта 8", file: "scripts/script8.js" },
-        { name: "Скрипт 9", description: "Описание скрипта 9", file: "scripts/script9.js" },
-        { name: "Скрипт 10", description: "Описание скрипта 10", file: "scripts/script10.js" },
-        { name: "Скрипт 11", description: "Описание скрипта 11", file: "scripts/script11.js" },
-        { name: "Скрипт 12", description: "Описание скрипта 12", file: "scripts/script12.js" },
-        { name: "Скрипт 13", description: "Описание скрипта 13", file: "scripts/script13.js" },
-        { name: "Скрипт 14", description: "Описание скрипта 14", file: "scripts/script14.js" },
-        { name: "Скрипт 15", description: "Описание скрипта 15", file: "scripts/script15.js" },
-        { name: "Скрипт 16", description: "Описание скрипта 16", file: "scripts/script16.js" },
-        { name: "Скрипт 17", description: "Описание скрипта 17", file: "scripts/script17.js" },
-        { name: "Скрипт 18", description: "Описание скрипта 18", file: "scripts/script18.js" },
-        { name: "Скрипт 19", description: "Описание скрипта 19", file: "scripts/script19.js" },
-        { name: "Скрипт 20", description: "Описание скрипта 20", file: "scripts/script20.js" },
         { name: "Скрипт 21", description: "Описание скрипта 21", file: "scripts/script21.js" },
         { name: "Скрипт 22", description: "Описание скрипта 22", file: "scripts/script22.js" },
         { name: "Скрипт 23", description: "Описание скрипта 23", file: "scripts/script23.js" },
@@ -141,21 +121,19 @@
     }
 
     // Поиск среди всех скриптов
-function searchScripts() {
+    function searchScripts() {
       const input = document.getElementById("search-input").value.toLowerCase();
       const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
       const results = scriptsPage2.filter(script =>
         script.name.toLowerCase().includes(input) ||
         script.description.toLowerCase().includes(input)
-  );
-  renderTable(results);
       );
 
       renderTable(results);
     }
 
     // Рендер таблицы
-function renderTable(scripts) {
+    function renderTable(scripts) {
       const tableBody = document.getElementById("table-body");
       tableBody.innerHTML = ""; // Очистка таблицы
 
@@ -171,7 +149,7 @@ function renderTable(scripts) {
     }
 
     // Инициализация
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
       const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
       renderTable(scriptsPage2); // Отображение скриптов со второй страницы
     });
@@ -214,8 +192,5 @@ document.addEventListener("DOMContentLoaded", () => {
   <footer>
     <p>© 2025 PCoptimize | <a href="index.html">На главную</a></p>
   </footer>
-</body>
-</html>
-
 </body>
 </html>
