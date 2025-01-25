@@ -92,6 +92,9 @@
     }
   </style>
   <script>
+    const scriptsPage1 = JSON.parse(localStorage.getItem("scriptsPage1") || "[]");
+const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
+const allScripts = [...scriptsPage1, ...scriptsPage2];
     // Проверка и сохранение данных в локальном хранилище только если данных нет
     if (!localStorage.getItem("scriptsPage2")) {
       const scriptsPage2 = [
