@@ -3,195 +3,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PCoptimize - Скрипты (Страница 2)</title>
+  <title>Скрипты</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(120deg, #3a6186, #89253e);
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .search-box {
-      margin: 20px 0;
-      text-align: center;
-    }
-
-    .search-box input {
-      padding: 10px;
-      width: 70%;
-      border-radius: 5px;
-      border: none;
-      font-size: 1rem;
-    }
-
+    /* Стили для таблицы */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-      color: #333;
     }
-
-    table th, table td {
-      border: 1px solid #ccc;
-      padding: 15px;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
       text-align: left;
-      background: #fff;
     }
-
-    table th {
-      background: #3a6186;
-      color: #fff;
-    }
-
-    .download-btn {
-      padding: 10px 15px;
-      background: #3a6186;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .download-btn:hover {
-      background: #89253e;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      color: #fff;
-    }
-
-    footer a {
-      color: #a1c4fd;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+    th {
+      background-color: #f2f2f2;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>PCoptimize - Скрипты (Страница 2)</h1>
-    <p>Найдите и скачайте нужные скрипты для оптимизации вашего ПК.</p>
-  </header>
 
-  <div class="container">
-    <div class="search-box">
-      <input 
-        type="text" 
-        id="search-input" 
-        placeholder="Поиск скриптов..." 
-        oninput="searchScripts()"
-      />
-    </div>
+  <h1>Скрипты</h1>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Название</th>
-          <th>Описание</th>
-          <th>Скачать</th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-        <!-- Скрипты загружаются динамически через JavaScript -->
-      </tbody>
-    </table>
+  <input type="text" id="search" placeholder="Поиск..." onkeyup="searchScripts()">
 
-    <div style="text-align: center; margin-top: 20px;">
-      <a href="scripts-page1.html" style="color: #fff; text-decoration: none; background: #3a6186; padding: 10px 20px; border-radius: 5px;">Предыдущая страница</a>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2025 PCoptimize | <a href="index.html">На главную</a></p>
-  </footer>
+  <!-- Скрипты с 1 по 40 -->
+  <h2>Скрипты (1-40)</h2>
+  <table id="scriptsTable">
+    <thead>
+      <tr>
+        <th>Название скрипта</th>
+        <th>Описание</th>
+        <th>Файл</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Скрипт 1</td>
+        <td>Описание скрипта 1</td>
+        <td><a href="scripts/script1.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 2</td>
+        <td>Описание скрипта 2</td>
+        <td><a href="scripts/script2.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 3</td>
+        <td>Описание скрипта 3</td>
+        <td><a href="scripts/script3.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 4</td>
+        <td>Описание скрипта 4</td>
+        <td><a href="scripts/script4.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 5</td>
+        <td>Описание скрипта 5</td>
+        <td><a href="scripts/script5.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 6</td>
+        <td>Описание скрипта 6</td>
+        <td><a href="scripts/script6.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 7</td>
+        <td>Описание скрипта 7</td>
+        <td><a href="scripts/script7.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 8</td>
+        <td>Описание скрипта 8</td>
+        <td><a href="scripts/script8.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 9</td>
+        <td>Описание скрипта 9</td>
+        <td><a href="scripts/script9.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 10</td>
+        <td>Описание скрипта 10</td>
+        <td><a href="scripts/script10.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 11</td>
+        <td>Описание скрипта 11</td>
+        <td><a href="scripts/script11.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 12</td>
+        <td>Описание скрипта 12</td>
+        <td><a href="scripts/script12.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 13</td>
+        <td>Описание скрипта 13</td>
+        <td><a href="scripts/script13.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 14</td>
+        <td>Описание скрипта 14</td>
+        <td><a href="scripts/script14.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 15</td>
+        <td>Описание скрипта 15</td>
+        <td><a href="scripts/script15.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 16</td>
+        <td>Описание скрипта 16</td>
+        <td><a href="scripts/script16.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 17</td>
+        <td>Описание скрипта 17</td>
+        <td><a href="scripts/script17.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 18</td>
+        <td>Описание скрипта 18</td>
+        <td><a href="scripts/script18.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 19</td>
+        <td>Описание скрипта 19</td>
+        <td><a href="scripts/script19.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 20</td>
+        <td>Описание скрипта 20</td>
+        <td><a href="scripts/script20.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 21</td>
+        <td>Описание скрипта 21</td>
+        <td><a href="scripts/script21.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 22</td>
+        <td>Описание скрипта 22</td>
+        <td><a href="scripts/script22.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 23</td>
+        <td>Описание скрипта 23</td>
+        <td><a href="scripts/script23.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 24</td>
+        <td>Описание скрипта 24</td>
+        <td><a href="scripts/script24.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 25</td>
+        <td>Описание скрипта 25</td>
+        <td><a href="scripts/script25.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 26</td>
+        <td>Описание скрипта 26</td>
+        <td><a href="scripts/script26.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 27</td>
+        <td>Описание скрипта 27</td>
+        <td><a href="scripts/script27.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 28</td>
+        <td>Описание скрипта 28</td>
+        <td><a href="scripts/script28.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 29</td>
+        <td>Описание скрипта 29</td>
+        <td><a href="scripts/script29.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 30</td>
+        <td>Описание скрипта 30</td>
+        <td><a href="scripts/script30.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 31</td>
+        <td>Описание скрипта 31</td>
+        <td><a href="scripts/script31.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 32</td>
+        <td>Описание скрипта 32</td>
+        <td><a href="scripts/script32.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 33</td>
+        <td>Описание скрипта 33</td>
+        <td><a href="scripts/script33.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 34</td>
+        <td>Описание скрипта 34</td>
+        <td><a href="scripts/script34.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 35</td>
+        <td>Описание скрипта 35</td>
+        <td><a href="scripts/script35.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 36</td>
+        <td>Описание скрипта 36</td>
+        <td><a href="scripts/script36.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 37</td>
+        <td>Описание скрипта 37</td>
+        <td><a href="scripts/script37.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 38</td>
+        <td>Описание скрипта 38</td>
+        <td><a href="scripts/script38.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 39</td>
+        <td>Описание скрипта 39</td>
+        <td><a href="scripts/script39.js" download>Скачать</a></td>
+      </tr>
+      <tr>
+        <td>Скрипт 40</td>
+        <td>Описание скрипта 40</td>
+        <td><a href="scripts/script40.js" download>Скачать</a></td>
+      </tr>
+    </tbody>
+  </table>
 
   <script>
-    // Проверка и сохранение данных в локальном хранилище только если данных нет
-    if (!localStorage.getItem("scriptsPage2")) {
-      const scriptsPage2 = [
-        { name: "Скрипт 21", description: "Описание скрипта 21", file: "scripts/script21.js" },
-        { name: "Скрипт 22", description: "Описание скрипта 22", file: "scripts/script22.js" },
-        { name: "Скрипт 23", description: "Описание скрипта 23", file: "scripts/script23.js" },
-        { name: "Скрипт 24", description: "Описание скрипта 24", file: "scripts/script24.js" },
-        { name: "Скрипт 25", description: "Описание скрипта 25", file: "scripts/script25.js" },
-        { name: "Скрипт 26", description: "Описание скрипта 26", file: "scripts/script26.js" },
-        { name: "Скрипт 27", description: "Описание скрипта 27", file: "scripts/script27.js" },
-        { name: "Скрипт 28", description: "Описание скрипта 28", file: "scripts/script28.js" },
-        { name: "Скрипт 29", description: "Описание скрипта 29", file: "scripts/script29.js" },
-        { name: "Скрипт 30", description: "Описание скрипта 30", file: "scripts/script30.js" },
-        { name: "Скрипт 31", description: "Описание скрипта 31", file: "scripts/script31.js" },
-        { name: "Скрипт 32", description: "Описание скрипта 32", file: "scripts/script32.js" },
-        { name: "Скрипт 33", description: "Описание скрипта 33", file: "scripts/script33.js" },
-        { name: "Скрипт 34", description: "Описание скрипта 34", file: "scripts/script34.js" },
-        { name: "Скрипт 35", description: "Описание скрипта 35", file: "scripts/script35.js" },
-        { name: "Скрипт 36", description: "Описание скрипта 36", file: "scripts/script36.js" },
-        { name: "Скрипт 37", description: "Описание скрипта 37", file: "scripts/script37.js" },
-        { name: "Скрипт 38", description: "Описание скрипта 38", file: "scripts/script38.js" },
-        { name: "Скрипт 39", description: "Описание скрипта 39", file: "scripts/script39.js" },
-        { name: "Скрипт 40", description: "Описание скрипта 40", file: "scripts/script40.js" }
-      ];
-
-      localStorage.setItem("scriptsPage2", JSON.stringify(scriptsPage2));
-    }
-
-    // Поиск среди всех скриптов
     function searchScripts() {
-      const input = document.getElementById("search-input").value.toLowerCase();
-      const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
-      const results = scriptsPage2.filter(script =>
-        script.name.toLowerCase().includes(input) ||
-        script.description.toLowerCase().includes(input)
-      );
+      let input = document.getElementById("search");
+      let filter = input.value.toLowerCase();
+      let table = document.getElementById("scriptsTable");
+      let tr = table.getElementsByTagName("tr");
 
-      renderTable(results);
+      // Ищем скрипты на обеих страницах
+      for (let i = 1; i < tr.length; i++) {
+        let td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          let txtValue = td.textContent || td.innerText;
+          if (txtValue.toLowerCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
     }
-
-    // Рендер таблицы
-    function renderTable(scripts) {
-      const tableBody = document.getElementById("table-body");
-      tableBody.innerHTML = ""; // Очистка таблицы
-
-      scripts.forEach(script => {
-        const row = document.createElement("tr");
-        row.innerHTML = `  
-          <td>${script.name}</td>
-          <td>${script.description}</td>
-          <td><a href="${script.file}" class="download-btn" download>Скачать</a></td>
-        `;
-        tableBody.appendChild(row);
-      });
-    }
-
-    // Инициализация
-    document.addEventListener("DOMContentLoaded", () => {
-      const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
-      renderTable(scriptsPage2); // Отображение скриптов с второй страницы
-    });
   </script>
+
 </body>
 </html>
+
