@@ -92,9 +92,6 @@
     }
   </style>
   <script>
-    const scriptsPage1 = JSON.parse(localStorage.getItem("scriptsPage1") || "[]");
-const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
-const allScripts = [...scriptsPage1, ...scriptsPage2];
     // Проверка и сохранение данных в локальном хранилище только если данных нет
     if (!localStorage.getItem("scriptsPage2")) {
       const scriptsPage2 = [
@@ -144,11 +141,12 @@ const allScripts = [...scriptsPage1, ...scriptsPage2];
     }
 
     // Поиск среди всех скриптов
-    function searchScripts() {
-  const input = document.getElementById("search-input").value.toLowerCase();
-  const results = allScripts.filter(script =>
-    script.name.toLowerCase().includes(input) ||
-    script.description.toLowerCase().includes(input)
+function searchScripts() {
+      const input = document.getElementById("search-input").value.toLowerCase();
+      const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
+      const results = scriptsPage2.filter(script =>
+        script.name.toLowerCase().includes(input) ||
+        script.description.toLowerCase().includes(input)
   );
   renderTable(results);
       );
@@ -157,24 +155,25 @@ const allScripts = [...scriptsPage1, ...scriptsPage2];
     }
 
     // Рендер таблицы
-    function renderTable(scripts) {
-  const tableBody = document.getElementById("table-body");
-  tableBody.innerHTML = ""; // Очистка таблицы
+function renderTable(scripts) {
+      const tableBody = document.getElementById("table-body");
+      tableBody.innerHTML = ""; // Очистка таблицы
 
-  scripts.forEach(script => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${script.name}</td>
-      <td>${script.description}</td>
-      <td><a href="${script.file}" class="download-btn" download>Скачать</a></td>
-    `;
-    tableBody.appendChild(row);
+      scripts.forEach(script => {
+        const row = document.createElement("tr");
+        row.innerHTML = `  
+          <td>${script.name}</td>
+          <td>${script.description}</td>
+          <td><a href="${script.file}" class="download-btn" download>Скачать</a></td>
+        `;
+        tableBody.appendChild(row);
       });
     }
 
     // Инициализация
-    document.addEventListener("DOMContentLoaded", () => {
-  renderTable(scriptsPage2);
+document.addEventListener("DOMContentLoaded", () => {
+      const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
+      renderTable(scriptsPage2); // Отображение скриптов со второй страницы
     });
   </script>
 </head>
