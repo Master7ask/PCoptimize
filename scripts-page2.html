@@ -5,10 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Скрипты</title>
   <style>
-    /* Стили для таблицы */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #4CAF50;
+    }
+    input[type="text"] {
+      padding: 10px;
+      margin: 20px 0;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 20px;
     }
     th, td {
       border: 1px solid #ddd;
@@ -18,16 +48,36 @@
     th {
       background-color: #f2f2f2;
     }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Скрипты</h1>
+  <header>
+    <h1>Скрипты</h1>
+  </header>
 
   <input type="text" id="search" placeholder="Поиск..." onkeyup="searchScripts()">
 
-  <!-- Скрипты с 1 по 40 -->
-  <h2>Скрипты (1-40)</h2>
+  <h2>Скрипты (21-40)</h2>
   <table id="scriptsTable">
     <thead>
       <tr>
@@ -37,106 +87,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Скрипт 1</td>
-        <td>Описание скрипта 1</td>
-        <td><a href="scripts/script1.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 2</td>
-        <td>Описание скрипта 2</td>
-        <td><a href="scripts/script2.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 3</td>
-        <td>Описание скрипта 3</td>
-        <td><a href="scripts/script3.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 4</td>
-        <td>Описание скрипта 4</td>
-        <td><a href="scripts/script4.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 5</td>
-        <td>Описание скрипта 5</td>
-        <td><a href="scripts/script5.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 6</td>
-        <td>Описание скрипта 6</td>
-        <td><a href="scripts/script6.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 7</td>
-        <td>Описание скрипта 7</td>
-        <td><a href="scripts/script7.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 8</td>
-        <td>Описание скрипта 8</td>
-        <td><a href="scripts/script8.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 9</td>
-        <td>Описание скрипта 9</td>
-        <td><a href="scripts/script9.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 10</td>
-        <td>Описание скрипта 10</td>
-        <td><a href="scripts/script10.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 11</td>
-        <td>Описание скрипта 11</td>
-        <td><a href="scripts/script11.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 12</td>
-        <td>Описание скрипта 12</td>
-        <td><a href="scripts/script12.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 13</td>
-        <td>Описание скрипта 13</td>
-        <td><a href="scripts/script13.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 14</td>
-        <td>Описание скрипта 14</td>
-        <td><a href="scripts/script14.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 15</td>
-        <td>Описание скрипта 15</td>
-        <td><a href="scripts/script15.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 16</td>
-        <td>Описание скрипта 16</td>
-        <td><a href="scripts/script16.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 17</td>
-        <td>Описание скрипта 17</td>
-        <td><a href="scripts/script17.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 18</td>
-        <td>Описание скрипта 18</td>
-        <td><a href="scripts/script18.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 19</td>
-        <td>Описание скрипта 19</td>
-        <td><a href="scripts/script19.js" download>Скачать</a></td>
-      </tr>
-      <tr>
-        <td>Скрипт 20</td>
-        <td>Описание скрипта 20</td>
-        <td><a href="scripts/script20.js" download>Скачать</a></td>
-      </tr>
       <tr>
         <td>Скрипт 21</td>
         <td>Описание скрипта 21</td>
@@ -240,6 +190,10 @@
     </tbody>
   </table>
 
+  <footer>
+    <p>© 2025 Все права защищены</p>
+  </footer>
+
   <script>
     function searchScripts() {
       let input = document.getElementById("search");
@@ -247,7 +201,7 @@
       let table = document.getElementById("scriptsTable");
       let tr = table.getElementsByTagName("tr");
 
-      // Ищем скрипты на обеих страницах
+      // Ищем скрипты
       for (let i = 1; i < tr.length; i++) {
         let td = tr[i].getElementsByTagName("td")[0];
         if (td) {
@@ -264,4 +218,3 @@
 
 </body>
 </html>
-
