@@ -17,17 +17,34 @@
       font-family: Arial, sans-serif;
       background: #1e1e2f;
       color: white;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Три кнопки в ряд */
-      grid-template-rows: 50vh 50vh; /* Два ряда, каждая по 50% высоты экрана */
-      height: 100vh;
+    /* Заголовок */
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background: #282c34;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #61dafb;
+      border-bottom: 2px solid #444;
+    }
+
+    /* Контейнер с кнопками */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
     }
 
     .button {
+      width: 200px;
+      height: 150px;
+      margin: 0 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -37,7 +54,9 @@
       color: white;
       font-size: 1.5rem;
       font-weight: bold;
+      border-radius: 10px;
       border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: background 0.3s ease, transform 0.2s ease;
       text-align: center;
     }
@@ -53,23 +72,20 @@
       color: #ddd;
     }
 
+    /* Нижняя часть страницы */
     footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      background: #282c34;
       text-align: center;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 10px;
-    }
-
-    footer p {
-      margin: 0;
+      padding: 15px 0;
       color: #fff;
+      border-top: 2px solid #444;
     }
 
     footer a {
-      color: #a1c4fd;
+      color: #61dafb;
       text-decoration: none;
+      margin: 0 10px;
+      font-size: 0.9rem;
     }
 
     footer a:hover {
@@ -78,43 +94,35 @@
   </style>
 </head>
 <body>
-  <!-- Контейнер с кнопками -->
-  <div class="container">
+  <!-- Верхний заголовок -->
+  <header>
+    PCoptimize
+  </header>
+
+  <!-- Центральные кнопки -->
+  <div class="buttons">
     <!-- Скрипты -->
     <a href="scripts.html" class="button">
       Скрипты
-      <span>Скрипты для автоматизации задач и оптимизации работы ПК.</span>
+      <span>Автоматизируйте задачи и оптимизируйте ПК.</span>
     </a>
     <!-- Программы -->
     <a href="programs.html" class="button">
       Программы
-      <span>Популярные программы для диагностики и повышения производительности.</span>
+      <span>Лучшие утилиты для диагностики и улучшения.</span>
     </a>
     <!-- Другое -->
     <a href="other.html" class="button">
       Другое
-      <span>Дополнительные инструменты и ресурсы для работы с компьютером.</span>
-    </a>
-    <!-- Пустая кнопка для заполнения -->
-    <a href="#" class="button">
-      Пусто
-      <span>Будет добавлено в будущем.</span>
-    </a>
-    <!-- Пустая кнопка для заполнения -->
-    <a href="#" class="button">
-      Пусто
-      <span>Будет добавлено в будущем.</span>
-    </a>
-    <!-- Пустая кнопка для заполнения -->
-    <a href="#" class="button">
-      Пусто
-      <span>Будет добавлено в будущем.</span>
+      <span>Дополнительные ресурсы и инструменты.</span>
     </a>
   </div>
 
-  <!-- Footer -->
+  <!-- Нижняя часть -->
   <footer>
-    <p>© 2025 PCoptimize | <a href="#">Политика конфиденциальности</a></p>
+    <a href="#">Контакты</a>
+    <a href="#">Политика конфиденциальности</a>
+    <a href="#">Условия использования</a>
   </footer>
 </body>
 </html>
