@@ -20,12 +20,12 @@
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin: 0;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 10px;
     }
 
@@ -36,20 +36,31 @@
       padding: 20px;
     }
 
+    .choice-card {
+      margin: 30px 0;
+    }
+
     .choice-btn {
       display: inline-block;
-      padding: 15px 25px;
-      margin: 20px;
+      padding: 20px 40px;
       background: #3a6186;
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      transition: background 0.3s ease;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .choice-btn:hover {
       background: #89253e;
+      transform: translateY(-5px);
+    }
+
+    .choice-desc {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #ddd;
     }
 
     footer {
@@ -76,9 +87,23 @@
   </header>
 
   <div class="container">
-    <a href="scripts.html" class="choice-btn">Скрипты</a>
-    <a href="programs.html" class="choice-btn">Программы</a>
-    <a href="other.html" class="choice-btn">Другое</a>
+    <!-- Скрипты -->
+    <div class="choice-card">
+      <a href="scripts.html" class="choice-btn">Скрипты</a>
+      <p class="choice-desc">Скрипты для автоматизации задач и оптимизации работы ПК.</p>
+    </div>
+
+    <!-- Программы -->
+    <div class="choice-card">
+      <a href="programs.html" class="choice-btn">Программы</a>
+      <p class="choice-desc">Популярные программы для диагностики и улучшения производительности вашего ПК.</p>
+    </div>
+
+    <!-- Другое -->
+    <div class="choice-card">
+      <a href="other.html" class="choice-btn">Другое</a>
+      <p class="choice-desc">Дополнительные инструменты и ресурсы для работы с компьютером.</p>
+    </div>
   </div>
 
   <footer>
