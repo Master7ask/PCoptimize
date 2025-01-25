@@ -142,11 +142,12 @@
 
     // Поиск среди всех скриптов
     function searchScripts() {
-      const input = document.getElementById("search-input").value.toLowerCase();
-      const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
-      const results = scriptsPage2.filter(script =>
-        script.name.toLowerCase().includes(input) ||
-        script.description.toLowerCase().includes(input)
+  const input = document.getElementById("search-input").value.toLowerCase();
+  const results = allScripts.filter(script =>
+    script.name.toLowerCase().includes(input) ||
+    script.description.toLowerCase().includes(input)
+  );
+  renderTable(results);
       );
 
       renderTable(results);
@@ -154,17 +155,17 @@
 
     // Рендер таблицы
     function renderTable(scripts) {
-      const tableBody = document.getElementById("table-body");
-      tableBody.innerHTML = ""; // Очистка таблицы
+  const tableBody = document.getElementById("table-body");
+  tableBody.innerHTML = ""; // Очистка таблицы
 
-      scripts.forEach(script => {
-        const row = document.createElement("tr");
-        row.innerHTML = `  
-          <td>${script.name}</td>
-          <td>${script.description}</td>
-          <td><a href="${script.file}" class="download-btn" download>Скачать</a></td>
-        `;
-        tableBody.appendChild(row);
+  scripts.forEach(script => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${script.name}</td>
+      <td>${script.description}</td>
+      <td><a href="${script.file}" class="download-btn" download>Скачать</a></td>
+    `;
+    tableBody.appendChild(row);
       });
     }
 
