@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMD Utility Scripts</title>
+  <style>
+    /* Основные стили */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #3a6186, #89253e);
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background: #3a6186;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #89253e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+
+    footer a {
+      color: #a1c4fd;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to my website!</h1>
+  <header>
+    <h1>CMD Utility Scripts</h1>
+    <p>Полезные скрипты для автоматизации задач Windows.</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>💾 Скрипт 1: Очистка временных файлов</h2>
+      <p>Этот скрипт помогает быстро удалить временные файлы, освобождая место на диске.</p>
+      <a href="scripts/clear-temp.bat" class="download-btn" download>Скачать</a>
+    </div>
+
+    <div class="card">
+      <h2>🌐 Скрипт 2: Проверка подключения к сети</h2>
+      <p>Проверяет интернет-соединение и выводит статус в консоль.</p>
+      <a href="scripts/check-network.bat" class="download-btn" download>Скачать</a>
+    </div>
+
+    <div class="card">
+      <h2>📦 Скрипт 3: Резервное копирование</h2>
+      <p>Создаёт резервную копию важных файлов и папок в указанное место.</p>
+      <a href="scripts/backup-files.bat" class="download-btn" download>Скачать</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 CMD Utility Scripts | <a href="#">Политика конфиденциальности</a></p>
+  </footer>
 </body>
 </html>
