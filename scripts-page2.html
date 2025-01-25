@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCoptimize - Скрипты (Страница 2)</title>
+  <style>
+    /* Тот же стиль, что и в первой странице */
+  </style>
+  <script>
+    const scriptsPage2 = [
+      { name: "Скрипт 21", description: "Описание скрипта 21", file: "scripts/script21.js" },
+      { name: "Скрипт 22", description: "Описание скрипта 22", file: "scripts/script22.js" },
+      { name: "Скрипт 23", description: "Описание скрипта 23", file: "scripts/script23.js" },
+      { name: "Скрипт 24", description: "Описание скрипта 24", file: "scripts/script24.js" },
+      { name: "Скрипт 25", description: "Описание скрипта 25", file: "scripts/script25.js" },
+      { name: "Скрипт 26", description: "Описание скрипта 26", file: "scripts/script26.js" },
+      { name: "Скрипт 27", description: "Описание скрипта 27", file: "scripts/script27.js" },
+      { name: "Скрипт 28", description: "Описание скрипта 28", file: "scripts/script28.js" },
+      { name: "Скрипт 29", description: "Описание скрипта 29", file: "scripts/script29.js" },
+      { name: "Скрипт 30", description: "Описание скрипта 30", file: "scripts/script30.js" },
+      { name: "Скрипт 31", description: "Описание скрипта 31", file: "scripts/script31.js" },
+      { name: "Скрипт 32", description: "Описание скрипта 32", file: "scripts/script32.js" },
+      { name: "Скрипт 33", description: "Описание скрипта 33", file: "scripts/script33.js" },
+      { name: "Скрипт 34", description: "Описание скрипта 34", file: "scripts/script34.js" },
+      { name: "Скрипт 35", description: "Описание скрипта 35", file: "scripts/script35.js" },
+      { name: "Скрипт 36", description: "Описание скрипта 36", file: "scripts/script36.js" },
+      { name: "Скрипт 37", description: "Описание скрипта 37", file: "scripts/script37.js" },
+      { name: "Скрипт 38", description: "Описание скрипта 38", file: "scripts/script38.js" },
+      { name: "Скрипт 39", description: "Описание скрипта 39", file: "scripts/script39.js" },
+      { name: "Скрипт 40", description: "Описание скрипта 40", file: "scripts/script40.js" }
+    ];
+
+    localStorage.setItem("scriptsPage2", JSON.stringify(scriptsPage2));
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderTable(scriptsPage2);
+    });
+
+    function renderTable(scripts) {
+      const tableBody = document.getElementById("table-body");
+      tableBody.innerHTML = ""; // Очистка таблицы
+
+      scripts.forEach(script => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${script.name}</td>
+          <td>${script.description}</td>
+          <td><a href="${script.file}" class="download-btn" download>Скачать</a></td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>PCoptimize - Скрипты (Страница 2)</h1>
+    <p>Найдите и скачайте нужные скрипты для оптимизации вашего ПК.</p>
+  </header>
+
+  <div class="container">
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="search-input" 
+        placeholder="Поиск скриптов..." 
+        oninput="searchScripts()"
+      />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Название</th>
+          <th>Описание</th>
+          <th>Скачать</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Динамическая загрузка -->
+      </tbody>
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="scripts-page1.html" style="color: #fff; text-decoration: none; background: #3a6186; padding: 10px 20px; border-radius: 5px;">Предыдущая страница</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 PCoptimize | <a href="index.html">На главную</a></p>
+  </footer>
+</body>
+</html>
 
