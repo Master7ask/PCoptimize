@@ -124,7 +124,7 @@
     function searchScripts() {
       const input = document.getElementById("search-input").value.toLowerCase();
       const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
-      const results = scriptsPage2.filter(script =>
+      const results = allScripts.filter(script =>
         script.name.toLowerCase().includes(input) ||
         script.description.toLowerCase().includes(input)
       );
