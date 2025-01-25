@@ -126,7 +126,7 @@
       const scriptsPage1 = JSON.parse(localStorage.getItem("scriptsPage1") || "[]");
       const scriptsPage2 = JSON.parse(localStorage.getItem("scriptsPage2") || "[]");
       const allScripts = [...scriptsPage1, ...scriptsPage2];
-      const results = scriptsPage2.filter(script =>
+      const results = allScripts.filter(script =>
         script.name.toLowerCase().includes(input) ||
         script.description.toLowerCase().includes(input)
       );
